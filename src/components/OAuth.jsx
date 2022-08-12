@@ -1,11 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import {
-  getAuth,
-  signInWithPopup,
-  googleAuthProvider,
-  GoogleAuthProvider,
-} from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { doc, setDoc, getDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { toast } from "react-toastify";
@@ -29,7 +24,7 @@ const OAuth = () => {
         await setDoc(doc(db, "users", user.uid), {
           name: user.displayName,
           email: user.email,
-          timeStamp: serverTimestamp(),
+          timestamp: serverTimestamp(),
         });
       }
       navigate("/");

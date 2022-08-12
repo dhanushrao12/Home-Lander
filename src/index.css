@@ -56,6 +56,23 @@ button {
   height: 300px;
   border-radius: 1rem;
 }
+.buttonSmall {
+  cursor: pointer;
+  background: #00cc66;
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: space;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+  gap: 100px;
+}
 
 .primaryButton {
   cursor: pointer;
@@ -171,6 +188,21 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.contactListItems {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactListItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .navbarListItemName,
@@ -330,6 +362,12 @@ button {
   width: 100%;
   height: 100%;
 }
+.swiperSlideDivExplore {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
 
 .swiperSlideImg {
   width: 100%;
@@ -339,13 +377,14 @@ button {
 .swiperSlideText {
   color: #ffffff;
   position: absolute;
-  top: 70px;
+  top: 150px;
   left: 0;
   font-weight: 600;
   max-width: 90%;
   font-size: 1.25rem;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5rem;
+  border-radius: 20px;
 }
 @media (min-width: 1024px) {
   .swiperSlideText {
@@ -356,7 +395,7 @@ button {
 .swiperSlidePrice {
   color: #000000;
   position: absolute;
-  top: 143px;
+  top: 200px;
   left: 11px;
   font-weight: 600;
   max-width: 90%;
@@ -402,8 +441,9 @@ button {
 
 .categoryListing {
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   align-items: center;
+  gap: 20px;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -434,7 +474,7 @@ button {
   }
 }
 
-.categoryListingLocation {
+.categoryListingAddress {
   font-weight: 600;
   font-size: 0.7rem;
   opacity: 0.8;
@@ -459,13 +499,15 @@ button {
 
 .categoryListingInfoDiv {
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   max-width: 275px;
+  gap: 10px;
 }
 
 .categoryListingInfoText {
   font-weight: 500;
   font-size: 0.7rem;
+  margin-right: 7px;
 }
 
 .loadMore {
@@ -507,7 +549,7 @@ button {
   margin-bottom: 0.5rem;
 }
 
-.listingLocation {
+.listingAddress {
   margin-top: 0;
   font-weight: 600;
 }
@@ -543,7 +585,7 @@ button {
   opacity: 0.8;
 }
 
-.listingLocationTitle {
+.listingAddressTitle {
   margin-top: 2rem;
   font-weight: 600;
   font-size: 1.25rem;
@@ -578,7 +620,7 @@ button {
   font-weight: 600;
 }
 
-.contactListingLocation {
+.contactListingAddress {
   margin-top: 0.25rem;
   font-weight: 600;
 }
@@ -763,18 +805,22 @@ button {
   margin-right: 3rem;
   padding: 0.9rem 0.7rem;
   text-align: center;
+  width: 40%;
 }
-
+.smallInput {
+  margin-right: 80px;
+  margin-left: 15px;
+}
 .formInputName {
   padding: 0.9rem 1rem;
   width: 90%;
-  max-width: 326px;
+  max-width: 350px;
 }
 
 .formInputAddress {
   padding: 0.9rem 1rem;
   width: 90%;
-  max-width: 326px;
+  max-width: 350px;
 }
 
 .formPriceDiv {
@@ -783,8 +829,12 @@ button {
 }
 
 .formPriceText {
-  margin-left: -1.5rem;
+  margin-left: -2rem;
   font-weight: 600;
+}
+#formPriceSymbol {
+  margin-left: 0rem;
+  padding-right: 10px;
 }
 
 .imagesInfo {
@@ -794,6 +844,7 @@ button {
 
 .formInputFile {
   width: 100%;
+  max-width: 400px;
 }
 .formInputFile::-webkit-file-upload-button {
   background-color: #00cc66;
@@ -807,6 +858,12 @@ button {
 
 .createListingButton {
   margin-top: 5rem;
+  width: 90%;
+  max-width: 350px;
+  display: flex;
+  margin-left: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .offers {
@@ -821,4 +878,7 @@ button {
   margin-left: 1rem;
   font-size: 0.8rem;
   opacity: 0.75;
+}
+.listingsList {
+  padding-inline-start: 5px;
 }
