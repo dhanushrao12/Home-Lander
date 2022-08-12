@@ -71,7 +71,12 @@ function Slider() {
                 >
                   <p className="swiperSlideText">{data.name}</p>
                   <p className="swiperSlidePrice">
-                    ₹{data.discountedPrice ?? data.regularPrice}{" "}
+                    ₹
+                    {data.discountedPrice
+                      ? parseInt(data.discountedPrice).toLocaleString("en-IN")
+                      : parseInt(data.regularPrice).toLocaleString(
+                          "en-IN"
+                        )}{" "}
                     {data.type === "rent" && "/ month"}{" "}
                   </p>
                 </div>
